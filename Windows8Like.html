@@ -1,0 +1,84 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Live Tiles</title>
+	<link href="MetroJs.Full.0.8.9.3g/MetroJs.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div class="tiles">
+    <div class="live-tile">
+        <div style="background-color:Red;">
+			<iframe src="http://www.goodsitesforkids.org/"></iframe>
+		</div>
+    </div>
+    <div class="live-tile" data-mode="flip">
+        <div style="background-color:green;">
+			<iframe src="http://yahoo.com"></iframe>
+		</div>
+        <!--div style="background-color:red;">test 2 - back</div-->
+    </div>
+    <div class="list-tile">
+        <ul class="flip-list fourTiles" data-mode="flip-list">
+            <li><div style="background-color:Blue;"></div><div style="background-color:Orange;"></div></li>
+            <li><div style="background-color:Orange;"></div><div style="background-color:Blue;"></div></li>
+            <li><div style="background-color:Green;"></div><div style="background-color:Red;"></div></li>
+            <li><div style="background-color:Red;"></div><div style="background-color:Green;"></div></li>
+        </ul>
+    </div>
+</div>
+    
+<div class="sidebar">
+				<ul id="menu" class="appbar-buttons">
+					<li>
+						<a href="/" class="home"><img src="MetroJs.Full.0.8.9.3g/images/1pixel.gif" alt="home" /></a>
+						<span class="charm-title">Home</span>
+					</li>
+					<li>
+						<a href="/about" class="about"><img src="MetroJs.Full.0.8.9.3g/images/1pixel.gif" alt="about" /></a>
+						<span class="charm-title">About</span>
+					</li>
+					<li>
+						<a href="http://www.twitter.com/dgreenwell" onclick="javascript:trackExternal(this);" target="_blank" class="twitter"><img src="/content/images/1pixel.gif" alt="twitter" /></a>
+						<span class="charm-title">Twitter</span>
+					</li>
+				</ul>
+			<a class="etc">&bull;&bull;&bull;</a>
+			
+	</div>
+
+<div class="appbar">
+				<ul id="menu" class="appbar-buttons">
+					<li>
+						<a href="/" class="home"><img src="MetroJs.Full.0.8.9.3g/images/1pixel.gif" alt="home" /></a>
+						<span class="charm-title">Home</span>
+					</li>
+					<li>
+						<a href="/about" class="about"><img src="MetroJs.Full.0.8.9.3g/images/1pixel.gif" alt="about" /></a>
+						<span class="charm-title">About</span>
+					</li>
+					<li>
+						<a href="http://www.twitter.com/dgreenwell" onclick="javascript:trackExternal(this);" target="_blank" class="twitter"><img src="MetroJs.Full.0.8.9.3g/images/1pixel.gif" alt="twitter" /></a>
+						<span class="charm-title">Twitter</span>
+					</li>
+				</ul>
+			<a class="etc">&bull;&bull;&bull;</a>
+			
+	</div>
+
+    <script src="http://www.drewgreenwell.com/tests/../Scripts/jquery-1.5.1.min.js" type="text/javascript"></script>
+	<script src="MetroJs.Full.0.8.9.3g/MetroJs.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(".live-tile,.flip-list").liveTile();
+			 $(".appbar").applicationBar({ 
+                  preloadAltBaseTheme: true, 
+                  bindKeyboard: true,
+                  metroLightUrl: 'http://www.drewgreenwell.com/tests/images/metroIcons_light.jpg',
+                  metroDarkUrl: 'http://www.drewgreenwell.com/tests/images/metroIcons.jpg'
+           }); 
+        });
+    </script>
+</body>
+</html>
